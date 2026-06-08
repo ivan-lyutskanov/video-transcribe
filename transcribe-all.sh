@@ -1,10 +1,10 @@
 #!/bin/bash
 # Transcribe all video/audio files in current directory with progress
 # Usage: ./transcribe-all.sh [language] [model]
-#   language: bg (default), en, auto, etc.
+#   language: en (default), bg, auto, etc.
 #   model: medium (default), small, tiny, base, large-v3
 
-LANG="${1:-bg}"
+LANG="${1:-en}"
 MODEL="${2:-medium}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 

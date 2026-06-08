@@ -107,7 +107,7 @@ skills/video-transcribe/scripts/transcribe.sh path/to/audio.ogg ./output bg
 ### Transcribe all files in current directory
 
 ```bash
-# Defaults: language=bg, model=medium
+# Defaults: language=en, model=medium
 ./transcribe-all.sh
 
 # Custom language and model
@@ -175,14 +175,14 @@ Models auto-download on first use and cache in `~/.local/share/whisper.cpp/`.
 Place the script in a directory with media files and run:
 
 ```bash
-# Bulgarian with medium model (defaults)
+# English with medium model (defaults)
 ./transcribe-all.sh
 
-# English with small model
-./transcribe-all.sh en small
+# Bulgarian with medium model
+./transcribe-all.sh bg
 
-# Auto-detect with base model
-./transcribe-all.sh auto base
+# Small model with auto language detection
+./transcribe-all.sh auto small
 ```
 
 Supported formats: `mp4`, `avi`, `mkv`, `mov`, `mp3`, `wav`, `m4a`, `ogg`.
@@ -231,8 +231,8 @@ Transcripts are saved as plain text files with metadata headers:
 # Date: 2025-01-01T12:00:00+00:00
 # Source: /path/to/video01.mp4
 
-[00:00:00 --> 00:00:05]  Добър ден и добре дошли на лекцията.
-[00:00:05 --> 00:00:10]  Днес ще говорим за основите на програмирането.
+[00:00:00 --> 00:00:05]  Hello and welcome to this lecture.
+[00:00:05 --> 00:00:10]  Today we will talk about large language models and how they work.
 ...
 ```
 
