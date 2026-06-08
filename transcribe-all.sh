@@ -32,7 +32,7 @@ for f in "${files[@]}"; do
   echo "━━━ [$count/$total] $name ━━━"
   echo ""
   PROGRESS=1 WHISPER_MODEL="$MODEL" WHISPER_LANG="$LANG" \
-    /Users/ivan/.config/opencode/skills/video-transcribe/scripts/transcribe.sh "$f" "$SCRIPT_DIR" "$LANG"
+    "$SCRIPT_DIR/skills/video-transcribe/scripts/transcribe.sh" "$f" "$SCRIPT_DIR" "$LANG"
   echo ""
 done
 
