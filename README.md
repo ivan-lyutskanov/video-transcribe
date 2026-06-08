@@ -71,6 +71,16 @@ sudo ln -s "$(pwd)/build/bin/whisper-cli" /usr/local/bin/whisper-cli
 sudo pacman -S ffmpeg whisper-cpp
 ```
 
+### Windows (via WSL)
+
+```powershell
+# Install WSL2 with Ubuntu, then follow the Linux instructions inside WSL
+wsl --install -d Ubuntu
+# After reboot, open Ubuntu terminal and run the Linux (Ubuntu/Debian) steps above
+```
+
+All scripts run inside the WSL terminal. Place your media files in a Windows folder accessible from WSL at `/mnt/c/Users/YourName/...`.
+
 ### Verify installation
 
 ```bash
