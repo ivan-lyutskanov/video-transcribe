@@ -2,6 +2,8 @@
 
 Local video/audio transcription using [whisper.cpp](https://github.com/ggerganov/whisper.cpp) — no API keys, no cloud, fully private.
 
+Designed for [opencode](https://opencode.ai) as a reusable skill, but works with any AI coding agent or directly from the command line.
+
 Transcribes speech from video files, audio files, Telegram voice messages, or URLs into timestamped text files.
 
 ## Features
@@ -12,6 +14,37 @@ Transcribes speech from video files, audio files, Telegram voice messages, or UR
 - **Progress bars** — see conversion and transcription progress
 - **Auto model download** — models download on first use and cache locally
 - **Flexible input** — local files, URLs, Telegram audio messages
+
+## Usage Options
+
+### Run manually (any terminal)
+
+```bash
+# From the repo root
+skills/video-transcribe/scripts/transcribe.sh video.mp4
+
+# Or place the script anywhere and use it standalone
+/path/to/transcribe.sh video.mp4
+```
+
+### Use with opencode (recommended)
+
+[opencode](https://opencode.ai) is an AI coding assistant that supports reusable skills. Install this skill so opencode can transcribe videos for you automatically.
+
+```bash
+# Clone the repo
+git clone https://github.com/ivan-lyutskanov/video-transcribe.git ~/Projects/video-transcribe
+
+# Symlink the skill into opencode's skills directory
+mkdir -p ~/.config/opencode/skills
+ln -s ~/Projects/video-transcribe/skills/video-transcribe ~/.config/opencode/skills/video-transcribe
+```
+
+Once installed, opencode will automatically load the skill and you can ask it to transcribe videos, batch process directories, or extract audio from any media file.
+
+### Use with other AI agents
+
+The scripts are plain bash — any AI coding agent (Claude Code, Cursor, etc.) can invoke them directly via terminal commands. Point your agent to the script paths and it can transcribe, batch process, or integrate transcription into larger workflows.
 
 ## Dependencies
 
