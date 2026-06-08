@@ -74,7 +74,7 @@ skills/video-transcribe/scripts/transcribe.sh path/to/audio.ogg ./output bg
 ### Transcribe from a URL
 
 ```bash
-curl -L -o /tmp/video.mp4 "https://example.com/lecture.mp4" && \
+curl -L -o /tmp/video.mp4 "https://example.com/video.mp4" && \
   skills/video-transcribe/scripts/transcribe.sh /tmp/video.mp4
 ```
 
@@ -156,20 +156,20 @@ done
 
 ### Course workflow
 
-1. Download lecture videos
+1. Download video videos
 2. Run transcription
 3. Read and summarize the transcript
 4. Store notes alongside the transcript
 
 ```bash
 # Step 1: Download
-curl -L -o lecture01.mp4 "https://example.com/lecture01.mp4"
+curl -L -o video01.mp4 "https://example.com/video01.mp4"
 
 # Step 2: Transcribe
-skills/video-transcribe/scripts/transcribe.sh lecture01.mp4 ./transcripts bg
+skills/video-transcribe/scripts/transcribe.sh video01.mp4 ./transcripts bg
 
 # Step 3: Read the output
-cat ./transcripts/lecture01-*.txt
+cat ./transcripts/video01-*.txt
 ```
 
 ### Telegram voice messages
@@ -184,9 +184,9 @@ skills/video-transcribe/scripts/transcribe.sh voice.ogg "" bg
 Transcripts are saved as plain text files with metadata headers:
 
 ```
-# Transcript: lecture01
+# Transcript: video01
 # Date: 2025-01-01T12:00:00+00:00
-# Source: /path/to/lecture01.mp4
+# Source: /path/to/video01.mp4
 
 [00:00:00 --> 00:00:05]  Добър ден и добре дошли на лекцията.
 [00:00:05 --> 00:00:10]  Днес ще говорим за основите на програмирането.
