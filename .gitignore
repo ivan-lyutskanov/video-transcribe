@@ -1,0 +1,9 @@
+# Transcripts
+transcripts/
+*.txt
+
+# Whisper temp files
+/tmp/whisper-*
+
+# macOS
+.DS_Store
